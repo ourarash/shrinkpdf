@@ -1,16 +1,41 @@
-### Shrinkpdf
+# Shrinkpdf
+
 Reduce size of PDF (compress) using Ghostscript at terminal.
 
-#### Execution
+# Requirement
 
-Move the shrinkpdf.sh to your system execution folder (e.g. /bin/ in Linux distro). Give it permissions to execute
+Make sure `gs` is installed on your machine and it's in your path.
 
-  ``chmod +x ~/bin/shrinkpdf.sh``
+## Installation on Mac:
 
-Run it as follows:
+```bash
+brew install ghostscript
+```
 
-<tt>~/bin/shrinkpdf.sh input.pdf output.pdf</tt>
-  
-<tt>~/bin/shrinkpdf.sh input.pdf output.pdf 100</tt>
+Check [here](http://macappstore.org/ghostscript/) for more info on mac installation.
 
-<tt>~/bin/shrinkpdf.sh input.pdf output.pdf 120</tt>
+## Windows and Linux
+
+See [how to install gs](https://www.ghostscript.com/doc/current/Install.htm)
+
+# Usage
+
+Once `gs` is installed in your system and it's in your path:
+
+```bash
+shrinkpdf.sh infile [outfile] [resolution_in_dpi]
+```
+
+## Examples:
+
+```bash
+shrinkpdf.sh input.pdf output.pdf
+```
+
+```bash
+shrinkpdf.sh input.pdf output.pdf 100
+```
+
+```bash
+shrinkpdf.sh input.pdf output.pdf 120
+```
